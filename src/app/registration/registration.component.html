@@ -1,0 +1,71 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-7 intro-section">
+            <div class="brand-wrapper">
+                <img src="assets/images/regimage.png" width="700px">
+            </div>
+        </div>
+         <div class="col-sm-6 col-md-5 form-section">
+        <form [formGroup]="registrationForm" (ngSubmit)="addUser()">
+           
+                <div class="login-wrapper">
+                    <h2 class="login-title">Create an Account</h2> 
+                 											
+                        <div class="form-group">						
+                          <label for="Uname">User Name:</label>
+                          <input type="name" class="form-control" placeholder="User name" formControlName="uname" id="uname">	
+                          <div *ngIf="submitted && registrationForm.controls.uname.errors" class="error">
+                            <div class="text-danger" *ngIf="registrationForm.controls.uname.errors.required"> Name is required </div>
+                        </div>										
+
+                          <div class="form-group">											
+                            <label for="email">Email address:</label>											
+                            <input type="email" class="form-control" placeholder="Email" formControlName="email" id="email">	
+                            <div *ngIf="submitted && registrationForm.controls.email.errors" class="error">
+                                <div class="text-danger" *ngIf="registrationForm.controls.email.errors.required"> Email is
+                                    required </div>
+                            </div>									
+                        </div>
+
+                        <div class="form-group">											
+                            <label for="password">Password:</label>											
+                            <input type="password" class="form-control" class="form-control" placeholder="password" formControlName="password" id="password">											
+                            <div *ngIf="submitted && registrationForm.controls.password.errors" class="error">
+                                <div class="text-danger" *ngIf="registrationForm.controls.password.errors.required">
+                                    Password is required </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">											
+                            <label for="password">Confirm Password:</label>											
+                            <input type="password" class="form-control" placeholder="confirm password" formControlName="cpassword" id="cpassword">
+                            <div *ngIf="submitted && registrationForm.controls.cpassword.errors" class="error">
+                                <div class="text-danger" *ngIf="registrationForm.controls.cpassword.errors.required">
+                                    Confirm password is required </div>
+                            </div>											
+                        </div>
+                        <div class="form-group">											
+                            <label for="number">Phone Number:</label>											
+                            <input type="number" class="form-control" placeholder="Phone Number" formControlName="phonenumber" id="phonenumber">											
+                            <div *ngIf="submitted && registrationForm.controls.phonenumber.errors" class="error">
+                                <div class="text-danger" *ngIf="registrationForm.controls.phonenumber.errors.required">
+                                    Phone number is required </div>
+                            </div>
+                        </div>
+    
+                        <!-- <button class="btn btn-success" [routerLink]="['/login']">Sign-Up</button> &nbsp; &nbsp; -->
+                        <input type="submit" value="Sign-Up">
+    
+            </div>
+        </div>
+
+            
+      
+
+
+

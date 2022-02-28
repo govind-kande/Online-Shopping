@@ -1,0 +1,56 @@
+
+.brand-wrapper .logo {
+    height: 35px;
+    
+}
+
+
+.login-wrapper {
+    width: 300px;
+    max-width: 100%
+}
+
+
+
+.login-wrapper .form-control {
+    border: 0;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 20px;
+    margin-bottom: 7px
+}
+
+.login-wrapper .form-control::-webkit-input-placeholder {
+    color: #b0adad
+}
+
+.login-wrapper .form-control::-moz-placeholder {
+    color: #b0adad
+}
+
+.login-wrapper .form-control:-ms-input-placeholder {
+    color: #b0adad
+}
+
+.login-wrapper .form-control::-ms-input-placeholder {
+    color: #b0adad
+}
+
+.login-wrapper .form-control::placeholder {
+    color: #b0adad
+}
+
+
+
+.login-btn {
+    padding: 13px 30px;
+    background-color: #000;
+    border-radius: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff
+}
+
+
