@@ -1,0 +1,20 @@
+*******************USER TABLE****************************
+
+CREATE database ONLINESHOPPINGDB;
+
+use ONLINESHOPPINGDB;
+show tables;
+
+
+create table USER (
+ID int auto_increment,
+FULL_NAME varchar(50) NOT null,
+MAIL_ID varchar(50) unique,
+PASSWORD varchar(20) NOT NULL,
+MOBILE_NUMBER varchar(10) unique NOT NULL,
+primary key (ID));
+
+SELECT * FROM USER;
+
+INSERT INTO USER(FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER) VALUES
+('Govind', 'gk@gmail.com', 'gk1234', 9822227777);

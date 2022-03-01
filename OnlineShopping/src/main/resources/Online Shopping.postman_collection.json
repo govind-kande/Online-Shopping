@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "0eb3ffb4-2f14-4327-91df-d1bcb734c1f6",
+		"name": "Online Shopping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Online Shopping",
+			"item": [
+				{
+					"name": "GET listAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"empNo\": 111,\r\n        \"empName\": \"Mahes\",\r\n        \"empSal\": 70000.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/listAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"listAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET getUserByMailId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"empNo\": 111,\r\n        \"empName\": \"Mahes\",\r\n        \"empSal\": 70000.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/getUserByMailId/smair@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getUserByMailId",
+								"smair@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"fName\": \"Sai\",\r\n        \"mailId\": \"sai@gmail.com\",\r\n        \"password\": \"saii1234\",\r\n        \"mobileNo\": \"934302444\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/register/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"register",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
