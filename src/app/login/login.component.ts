@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit {
   submitted: boolean = false;
   invalidLogin: boolean = false;
   loginForm: any;
+  fname:any;
+  mailId:any;
+  password:any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -30,6 +33,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
+      
     }
 
     this.regserv
@@ -41,7 +45,10 @@ export class LoginComponent implements OnInit {
             localStorage.setItem(
               'username',
               this.loginForm.controls.email.value
+              
             );
+          
+            
             this.router.navigate(['home']);
           } else {
             this.invalidLogin = true;

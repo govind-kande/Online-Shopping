@@ -5,6 +5,7 @@ import { HomeDashboardComponent } from './home-dashboard/home-dashboard.componen
 import { HomeComponent } from './home/home.component';
 import { KidsDashboardComponent } from './kids-dashboard/kids-dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { MenDashboardComponent } from './men-dashboard/men-dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'kids/dashboard', component: KidsDashboardComponent },
   { path: 'home/dashboard', component: HomeDashboardComponent },
   { path: 'beauty/dashboard', component: BeautyDashboardComponent },
-  {path:'viewproduct',component:ViewproductComponent}
+  {path:'viewproduct',component:ViewproductComponent},
+  {path:'logout',component:LogoutComponent}
+  
 
 
 

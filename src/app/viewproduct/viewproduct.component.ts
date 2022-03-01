@@ -11,5 +11,6 @@ export class ViewproductComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

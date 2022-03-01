@@ -13,6 +13,10 @@ import { KidsDashboardComponent } from './kids-dashboard/kids-dashboard.componen
 import { HomeDashboardComponent } from './home-dashboard/home-dashboard.component';
 import { BeautyDashboardComponent } from './beauty-dashboard/beauty-dashboard.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { LogoutComponent } from './logout/logout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 
 
 @NgModule({
@@ -27,6 +31,8 @@ import { ViewproductComponent } from './viewproduct/viewproduct.component';
     HomeDashboardComponent,
     BeautyDashboardComponent,
     ViewproductComponent,
+    LogoutComponent,
+   
    
   ],
   imports: [
@@ -34,7 +40,8 @@ import { ViewproductComponent } from './viewproduct/viewproduct.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

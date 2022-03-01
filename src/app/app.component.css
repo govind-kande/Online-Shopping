@@ -114,6 +114,7 @@ nav {
   transform-origin: top center;
   animation: slideDown 300ms 300ms ease-in-out forwards;
 }
+
 @-moz-keyframes slideDown {
   0% {
     opacity: 0;
@@ -159,6 +160,11 @@ nav {
     width: 300  px;
     
 }
+.fa fa-user{
+text-align: left;
+}
+
+
 /*footer*/
 .round-btn {display: inline;height: 40px; width: 40px; background:#fff;border-radius: 50%;float: left;margin: 15px 8px;box-shadow: 2px 2px 5px 0px rgb(82, 0, 67);border: 1px solid;/*border: 1px solid #622657;*/}
 .round-btn a {display: block !important;padding: 7px 12px;font-size: 18px;border-radius: 50%;}
