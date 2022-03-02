@@ -75,12 +75,12 @@
 
         &nbsp; &nbsp;
      <div class="navbar-nav">
-          <li *ngIf="!loggedin()" class="dropdown dropdown-1"  [routerLink]="['/login']">
+          <li *ngIf="!getUserName()" class="dropdown dropdown-1"  [routerLink]="['/login']">
             &nbsp; &nbsp;<i class="fa fa-user" style="font-size:30px;color:rgb(255, 0, 149)"> </i> &nbsp;
            <h6>Login</h6></li>
-           <div *ngIf="loggedin()" class="dropdown dropdown_menu-1" dropdown>
+           <div *ngIf="getUserName()" class="dropdown dropdown_menu-1" dropdown>
             <li href="#" dropdownToggle (click)="false"><i class="fa fa-user" style="font-size:30px;color:rgb(255, 0, 149)" ></i>
-            welcome {{loggedinUser}}
+            Welcome {{getUserName()}}
             </li>
             <div *dropdownMenu>
   

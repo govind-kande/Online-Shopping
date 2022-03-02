@@ -47,8 +47,7 @@ export class LoginComponent implements OnInit {
               this.loginForm.controls.email.value
               
             );
-          
-            
+            sessionStorage.setItem('loggedInUsername', result.fName);
             this.router.navigate(['home']);
           } else {
             this.invalidLogin = true;
