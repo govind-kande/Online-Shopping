@@ -5,12 +5,14 @@
   border-bottom-left-radius: 30px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+ 
   
 }
 .container-fluid {
   background: white;
   border-radius: 30px;
   box-shadow: 5px 5px 11px rgb(216, 213, 213);
+  
 }
 /* ul {
   background-color: #36a4cf; 
@@ -26,6 +28,7 @@
   position: sticky;
   top:0;
   z-index: 100;
+  
 }
 
 nav {

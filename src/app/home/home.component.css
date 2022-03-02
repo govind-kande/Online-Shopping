@@ -2,12 +2,13 @@
 .wrapper{
     width: 100%;
     display: flex;
-    
-    animation: slide 16s infinite;
+    overflow: hidden;
+    /*animation: slide 16s infinite;*/
 }
 img{
     max-width: 100%;
     max-height: 100%;
+   
 }
 /*
 @keyframes slide{
@@ -40,6 +41,7 @@ img{
 
 * {
     box-sizing: border-box;
+    
   }
   
   h3{
@@ -67,4 +69,5 @@ img{
     content: "";
     clear: both;
     display: table;
-  }
+   
+}

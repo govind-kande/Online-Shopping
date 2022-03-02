@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { MenDashboardComponent } from './men-dashboard/men-dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { WomenDashboardComponent } from './women-dashboard/women-dashboard.component';
 
@@ -23,8 +25,9 @@ const routes: Routes = [
   { path: 'home/dashboard', component: HomeDashboardComponent },
   { path: 'beauty/dashboard', component: BeautyDashboardComponent },
   {path:'viewproduct',component:ViewproductComponent},
-  {path:'logout',component:LogoutComponent}
-  
+  {path:'logout',component:LogoutComponent},
+  {path:'shoppingcart',component:ShoppingCartComponent},
+  {path:'shippingaddress',component:ShippingAddressComponent}
 
 
 

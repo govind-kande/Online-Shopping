@@ -16,6 +16,8 @@ import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { LogoutComponent } from './logout/logout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
 
 
 
@@ -32,6 +34,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     BeautyDashboardComponent,
     ViewproductComponent,
     LogoutComponent,
+    ShoppingCartComponent,
+    ShippingAddressComponent,
    
    
   ],
