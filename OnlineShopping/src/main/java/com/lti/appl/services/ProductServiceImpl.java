@@ -30,10 +30,12 @@ public class ProductServiceImpl implements ProductService{
 		return prolist;
 	}
 
+
 	@Override
 	public List<Product> getProduct(String category) {
 		
 		return productDao.getProduct(category);
 	}
+
 
 }
