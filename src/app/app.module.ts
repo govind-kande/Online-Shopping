@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -36,6 +37,7 @@ import { ShippingAddressComponent } from './shipping-address/shipping-address.co
     LogoutComponent,
     ShoppingCartComponent,
     ShippingAddressComponent,
+    ProductComponent,
    
    
   ],
