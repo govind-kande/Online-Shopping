@@ -31,12 +31,12 @@ public class ProductDaoImpl implements ProductDao{
 
 
 	@Override
-	public List<Product> getProduct(String category) {
+	public List<Product> getProduct(String category, String productType) {
 		if (category == null) {
 			// throw 
 		}
 
-		Query qry= em.createQuery("select p from Product p WHERE category = '" + category +"'");
+		Query qry= em.createQuery("select p from Product p WHERE category = '" + category +"' and productType = '" + productType +"'");
 		List<Product> product=qry.getResultList();
 		return product;
 

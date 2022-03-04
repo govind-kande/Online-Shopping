@@ -30,9 +30,9 @@ public class ProductController {
 	}
 
 	
-	@GetMapping("/getProduct/{category}")
-	public List<Product> getProduct(@PathVariable(value = "category") String category) {
-	return productServiceImpl.getProduct(category);
+	@GetMapping("/getProduct/{category}/{productType}")
+	public List<Product> getProduct(@PathVariable(value = "category") String category, @PathVariable(value = "productType") String productType) {
+	return productServiceImpl.getProduct(category,productType);
 	}
 
 }

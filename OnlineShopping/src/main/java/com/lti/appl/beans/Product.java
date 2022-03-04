@@ -15,35 +15,38 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)	
 	@Column(name="PRODUCT_ID")
+
 	private int id;
-	
+
 	@Column(name="PRODUCT_BRAND")
 	private String brand;
-	
+
 	@Column(name="PRODUCT_TYPE")
-	private String name;
-	
+	private String productType;
+
 	@Column(name="PRICE")
 	private double price;
 
 	@Column(name="CATEGORY")
 	private String category;
 
-	
-	public Product() {
-		super();
-	}
+	@Column(name="IMAGE")
+	private String image;
 
-	
-	
-	public Product(int id, String name, double price) {
+	public Product(int id, String brand, String name, double price, String category, String image) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.brand = brand;
+		this.productType = name;
 		this.price = price;
+		this.category = category;
+		this.image = image;
 	}
 
-
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public int getId() {
 		return id;
@@ -62,11 +65,11 @@ public class Product {
 	}
 
 	public String getName() {
-		return name;
+		return productType;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.productType = name;
 	}
 
 	public double getPrice() {
@@ -86,20 +89,16 @@ public class Product {
 		this.category = category;
 	}
 
-	public Product(int id, String brand, String name, double price, String category) {
-		super();
-		this.id = id;
-		this.brand = brand;
-		this.name = name;
-		this.price = price;
-		this.category = category;
+	public String getImage() {
+		return image;
 	}
 
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", brand=" + brand + ", name=" + name + ", price=" + price + ", category="
-				+ category + "]";
+
+
+	public void setImage(String image) {
+		this.image = image;
 	}
-	
-	
+
+
+
 }

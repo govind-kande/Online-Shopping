@@ -32,9 +32,9 @@ public class ProductServiceImpl implements ProductService{
 
 
 	@Override
-	public List<Product> getProduct(String category) {
+	public List<Product> getProduct(String category, String productType) {
 		
-		return productDao.getProduct(category);
+		return productDao.getProduct(category,productType);
 	}
 
 
