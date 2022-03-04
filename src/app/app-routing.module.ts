@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BeautyDashboardComponent } from './beauty-dashboard/beauty-dashboard.component';
+import { GenericProductListComponent } from './generic-product-list/generic-product-list.component';
 import { HomeDashboardComponent } from './home-dashboard/home-dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { KidsDashboardComponent } from './kids-dashboard/kids-dashboard.component';
@@ -20,15 +21,15 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'dashboard', component: MenDashboardComponent },
- // { path: 'women/dashboard', component: WomenDashboardComponent },
- { path: 'dashboard/:women', component: WomenDashboardComponent },
+  // { path: 'dashboard/:category/:productType', component: WomenDashboardComponent },
   { path: 'kids/dashboard', component: KidsDashboardComponent },
   { path: 'home/dashboard', component: HomeDashboardComponent },
   { path: 'beauty/dashboard', component: BeautyDashboardComponent },
   {path:'viewproduct',component:ViewproductComponent},
   {path:'logout',component:LogoutComponent},
   {path:'shoppingcart',component:ShoppingCartComponent},
-  {path:'shippingaddress',component:ShippingAddressComponent}
+  {path:'shippingaddress',component:ShippingAddressComponent},
+  { path: 'dashboard/:category/:productType', component: GenericProductListComponent }
 
 
 

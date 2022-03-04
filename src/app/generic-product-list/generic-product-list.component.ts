@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from '../product/Product';
-
 import { ProductListService } from '../Services/product-list.service';
 
 @Component({
-  selector: 'app-women-dashboard',
-  templateUrl: './women-dashboard.component.html',
-  styleUrls: ['./women-dashboard.component.css'],
+  selector: 'app-generic-product-list',
+  templateUrl: './generic-product-list.component.html',
+  styleUrls: ['./generic-product-list.component.css']
 })
-export class WomenDashboardComponent implements OnInit {
+export class GenericProductListComponent implements OnInit {
 
   prodList: any[] = [];
   category: any;
@@ -31,4 +29,5 @@ export class WomenDashboardComponent implements OnInit {
       });
     });
   }
+
 }

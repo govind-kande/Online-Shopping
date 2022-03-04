@@ -11,7 +11,7 @@
           <li class="dropdown dropdown-1">
             MEN
             <ul class="dropdown_menu dropdown_menu-1">
-              <li class="dropdown_item-1" [routerLink]="['/dashboard']">Top Wear</li>
+              <li class="dropdown_item-1" [routerLink]="['dashboard/men/tshirt']">Top Wear</li>
               <li class="dropdown_item-1">Botoom Wear</li>
               <li class="dropdown_item-1">Foot Wear</li>
 
@@ -22,11 +22,12 @@
           <li class="dropdown dropdown-1">
             WOMEN
             <ul class="dropdown_menu dropdown_menu-1">
-              <li class="dropdown_item-1" [routerLink]="['dashboard/:women']">Sarees</li>
+              <!-- <li class="dropdown_item-1" [routerLink]="['dashboard/women']">Sarees</li> -->
+              <li class="dropdown_item-1" [routerLink]="['dashboard/women/Saree']">Sarees</li>
               <li class="dropdown_item-2">Dress Materials</li>
               <li class="dropdown_item-3">Jeans</li>
               <li class="dropdown_item-4">Jewellery</li>
-              <li class="dropdown_item-5">Foot Wear</li>
+              <li class="dropdown_item-5" [routerLink]="['dashboard/women/Foot Wear']">Foot Wear</li>
             </ul>
           </li>
 
@@ -45,18 +46,18 @@
             HOME & LIVING
             <ul class="dropdown_menu dropdown_menu-1">
               <li class="dropdown_item-1">Diwan Sets</li>
-              <li class="dropdown_item-2" [routerLink]="['/home/dashboard']">Sofa Covers</li>
+              <li class="dropdown_item-2" [routerLink]="['dashboard/homeliving/sofa']">Sofa Covers</li>
               <li class="dropdown_item-3">Celing Lamps</li>
               <li class="dropdown_item-4">Door Mats</li>
               <li class="dropdown_item-5">Wall Shelves</li>
             </ul>
           </li>
           <li class="dropdown dropdown-1">
-            BEAUTY
+            BEAUTY 
             <ul class="dropdown_menu dropdown_menu-1" dropdown>
               <li class="dropdown_item-1">Perfume</li>
               <li class="dropdown_item-2">Hair Oil</li>
-              <li class="dropdown_item-3" [routerLink]="['/beauty/dashboard']">Body Lotion</li>
+              <li class="dropdown_item-3" [routerLink]="['dashboard/beauty/bodylotion']">Body Lotion</li>
               <li class="dropdown_item-4">Eyeliner</li>
               <li class="dropdown_item-5">Foundation</li>
             </ul>

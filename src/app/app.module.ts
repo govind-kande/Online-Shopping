@@ -19,6 +19,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
 import { ProductComponent } from './product/product.component';
+import { GenericProductListComponent } from './generic-product-list/generic-product-list.component';
 
 
 
@@ -38,6 +39,7 @@ import { ProductComponent } from './product/product.component';
     ShoppingCartComponent,
     ShippingAddressComponent,
     ProductComponent,
+    GenericProductListComponent,
    
    
   ],
