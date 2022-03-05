@@ -7,9 +7,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -38,13 +36,8 @@ public class Product {
 	@Column(name="IMAGE")
 	private String image;
 	
-	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
-	@JoinColumn(name="PRODUCT_ID")
-	private ShoppingCart shoppingcart;
 
-
-	public Product(int id, String brand, String productType, double price, String category, String image,
-			ShoppingCart shoppingcart) {
+	public Product(int id, String brand, String productType, double price, String category, String image) {
 		super();
 		this.id = id;
 		this.brand = brand;
@@ -52,7 +45,6 @@ public class Product {
 		this.price = price;
 		this.category = category;
 		this.image = image;
-		this.shoppingcart = shoppingcart;
 	}
 
 	public String getProductType() {
@@ -63,13 +55,6 @@ public class Product {
 		this.productType = productType;
 	}
 
-	public ShoppingCart getShoppingcart() {
-		return shoppingcart;
-	}
-
-	public void setShoppingcart(ShoppingCart shoppincart) {
-		this.shoppingcart = shoppincart;
-	}
 
 	public Product() {
 		super();
