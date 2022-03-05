@@ -20,6 +20,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
 import { ProductComponent } from './product/product.component';
 import { GenericProductListComponent } from './generic-product-list/generic-product-list.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 
@@ -40,6 +41,7 @@ import { GenericProductListComponent } from './generic-product-list/generic-prod
     ShippingAddressComponent,
     ProductComponent,
     GenericProductListComponent,
+    ForgotPasswordComponent,
    
    
   ],

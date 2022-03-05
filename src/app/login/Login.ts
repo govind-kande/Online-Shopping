@@ -1,5 +1,5 @@
 export class Login {
-fname:string="";
+    fname:string="";
     mailId: string = "";
     password: string = "";
   static find: any;

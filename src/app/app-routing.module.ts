@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BeautyDashboardComponent } from './beauty-dashboard/beauty-dashboard.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { GenericProductListComponent } from './generic-product-list/generic-product-list.component';
 import { HomeDashboardComponent } from './home-dashboard/home-dashboard.component';
 import { HomeComponent } from './home/home.component';
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'logout',component:LogoutComponent},
   {path:'shoppingcart',component:ShoppingCartComponent},
   {path:'shippingaddress',component:ShippingAddressComponent},
-  { path: 'dashboard/:category/:productType', component: GenericProductListComponent }
+  { path: 'dashboard/:category/:productType', component: GenericProductListComponent },
+  {path:'ForgotPassword', component:ForgotPasswordComponent }
 
 
 
