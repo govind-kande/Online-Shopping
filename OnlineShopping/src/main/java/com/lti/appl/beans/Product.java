@@ -1,10 +1,15 @@
 package com.lti.appl.beans;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -32,15 +37,38 @@ public class Product {
 
 	@Column(name="IMAGE")
 	private String image;
+	
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	@JoinColumn(name="PRODUCT_ID")
+	private ShoppingCart shoppingcart;
 
-	public Product(int id, String brand, String name, double price, String category, String image) {
+
+	public Product(int id, String brand, String productType, double price, String category, String image,
+			ShoppingCart shoppingcart) {
 		super();
 		this.id = id;
 		this.brand = brand;
-		this.productType = name;
+		this.productType = productType;
 		this.price = price;
 		this.category = category;
 		this.image = image;
+		this.shoppingcart = shoppingcart;
+	}
+
+	public String getProductType() {
+		return productType;
+	}
+
+	public void setProductType(String productType) {
+		this.productType = productType;
+	}
+
+	public ShoppingCart getShoppingcart() {
+		return shoppingcart;
+	}
+
+	public void setShoppingcart(ShoppingCart shoppincart) {
+		this.shoppingcart = shoppincart;
 	}
 
 	public Product() {
@@ -94,11 +122,10 @@ public class Product {
 	}
 
 
-
 	public void setImage(String image) {
 		this.image = image;
 	}
 
-
+	
 
 }
