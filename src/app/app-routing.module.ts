@@ -13,33 +13,30 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
-import { WomenDashboardComponent } from './women-dashboard/women-dashboard.component';
 
 const routes: Routes = [
-  { path: '',component: HomeComponent },	
-  
-  { path: 'home',component:HomeComponent},							
+  { path: '', component: HomeComponent },
+
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'dashboard', component: MenDashboardComponent },
-  // { path: 'dashboard/:category/:productType', component: WomenDashboardComponent },
   { path: 'kids/dashboard', component: KidsDashboardComponent },
   { path: 'home/dashboard', component: HomeDashboardComponent },
   { path: 'beauty/dashboard', component: BeautyDashboardComponent },
-  {path:'viewproduct',component:ViewproductComponent},
-  {path:'logout',component:LogoutComponent},
-  {path:'shoppingcart',component:ShoppingCartComponent},
-  {path:'shippingaddress',component:ShippingAddressComponent},
-  { path: 'dashboard/:category/:productType', component: GenericProductListComponent },
-  {path:'ForgotPassword', component:ForgotPasswordComponent }
-
-
-
-
+  { path: 'viewproduct', component: ViewproductComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'shoppingcart', component: ShoppingCartComponent },
+  { path: 'shippingaddress', component: ShippingAddressComponent },
+  {
+    path: 'dashboard/:category/:productType',
+    component: GenericProductListComponent,
+  },
+  { path: 'ForgotPassword', component: ForgotPasswordComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

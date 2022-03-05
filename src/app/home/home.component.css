@@ -59,9 +59,13 @@ img{
     color: rgb(83, 2, 56); 
 }
   .column {
-    float: left;
+    /* float: left; */
     width: 250px;
     padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   
   /* Clearfix (clear floats) */

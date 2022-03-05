@@ -33,7 +33,7 @@ export class RegistrationComponent implements OnInit {
     const registrationFormValue = this.registrationForm.value;
     const user = new Register(registrationFormValue.uname, registrationFormValue.email, registrationFormValue.password, registrationFormValue.phonenumber)
     console.log(registrationFormValue.password)
-    if(registrationFormValue.cpassword==registrationFormValue.password){
+    if(registrationFormValue.cpassword==registrationFormValue.password) {
     this.regserv.addUser(user)
         .subscribe( data => {
           alert("Account created successfully, please login now !!");

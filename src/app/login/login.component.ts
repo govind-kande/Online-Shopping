@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
-  FormControl,
-  FormGroup,
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterService } from '../Services/register.service';
-import { Login } from './Login';
 
 @Component({
   selector: 'app-login',
@@ -40,14 +37,10 @@ export class LoginComponent implements OnInit {
       .getUserByMailId(this.loginForm.controls.email.value)
       .subscribe(
         (result) => {
-          console.log(result);
           if (this.loginForm.controls.email.value == result.mailId && this.loginForm.controls.password.value == result.password) {
-            localStorage.setItem(
-              'username',
-              this.loginForm.controls.email.value
-              
-            );
             sessionStorage.setItem('loggedInUsername', result.fName);
+            console.log(result.id);
+            sessionStorage.setItem('loggedInUserId', `${result.id}`);
             this.router.navigate(['home']);
           } else {
             this.invalidLogin = true;
