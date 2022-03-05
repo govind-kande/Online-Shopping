@@ -18,8 +18,7 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)	
 	@Column(name="PRODUCT_ID")
-
-	private int id;
+	private int productId;
 
 	@Column(name="PRODUCT_BRAND")
 	private String brand;
@@ -37,9 +36,9 @@ public class Product {
 	private String image;
 	
 
-	public Product(int id, String brand, String productType, double price, String category, String image) {
+	public Product(int productId, String brand, String productType, double price, String category, String image) {
 		super();
-		this.id = id;
+		this.productId = productId;
 		this.brand = brand;
 		this.productType = productType;
 		this.price = price;
@@ -62,11 +61,11 @@ public class Product {
 	}
 
 	public int getId() {
-		return id;
+		return productId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int productId) {
+		this.productId = productId;
 	}
 
 	public String getBrand() {
