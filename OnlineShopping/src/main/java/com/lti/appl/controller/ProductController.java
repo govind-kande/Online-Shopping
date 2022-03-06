@@ -28,7 +28,6 @@ public class ProductController {
 		return productServiceImpl.listAllProduct();
 		
 	}
-
 	
 	@GetMapping("/getProduct/{category}/{productType}")
 	public List<Product> getProduct(@PathVariable(value = "category") String category, @PathVariable(value = "productType") String productType) {
