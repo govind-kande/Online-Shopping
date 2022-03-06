@@ -24,17 +24,16 @@ import com.lti.appl.services.UserServiceImpl;
 @RequestMapping("/shippingaddress")
 public class ShippingAddressController {
 
-
 	@Autowired private ShippingAddressServiceImpl shipAddressService;
 
 	//http://localhost:8080/register/getUser/101
-	  @GetMapping("/getUser/{userId}") 
-	  public ShippingAddress getUser(@PathVariable(value = "userId") int userId) { 
-		  return shipAddressService.getUser(userId);
-	  }
+	@GetMapping("/getUser/{userId}") 
+	public ShippingAddress getUser(@PathVariable(value = "userId") int userId) { 
+		return shipAddressService.getUser(userId);
+	}
 
-	  @PostMapping("/addShippingDetails")
-		public void addShippingDetails(@RequestBody ShippingAddress s){
-		  shipAddressService.addShippingDetails(s);	
-		}
+	@PostMapping("/addShippingDetails")
+	public void addShippingDetails(@RequestBody ShippingAddress s) {
+		shipAddressService.addShippingDetails(s);	
+	}
 }

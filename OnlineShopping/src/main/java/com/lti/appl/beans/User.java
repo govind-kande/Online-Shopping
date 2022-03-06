@@ -11,15 +11,13 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="USER")
-public class User { //FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER ID
+public class User {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)	
-	
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="ID")
 	private int Id;
-	
-	
+
 	@Column(name="FULL_NAME")
 	private String fName;
 	
@@ -34,7 +32,6 @@ public class User { //FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER ID
 
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User(int id, String fName, String mailId, String password, String mobileNo) {
@@ -84,19 +81,5 @@ public class User { //FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER ID
 
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
-	}
-
-//	@Override
-//	public String toString() {
-//		return "Register [Id=" + Id + ", fName=" + fName + ", mailId=" + mailId + ", password=" + password
-//				+ ", mobileNo=" + mobileNo + "]";
-//	}
-
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

@@ -26,15 +26,13 @@ public class ShippingAddressServiceImpl implements ShippingAddressService{
 		this.dao = dao;
 	}
 
-
-	@Override public ShippingAddress getUser(int userId) {
+	@Override 
+	public ShippingAddress getUser(int userId) {
 		return dao.getUser(userId);
 	}
 
 	public int addShippingDetails(ShippingAddress s) {
-		int ID=dao.addShippingDetails(s);		
-		return ID;
-		
+		return dao.addShippingDetails(s);
 	}
 
 }

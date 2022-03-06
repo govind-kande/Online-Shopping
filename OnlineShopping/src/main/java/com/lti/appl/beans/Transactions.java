@@ -35,13 +35,9 @@ public class Transactions {
 	
 	@Column(name="ORDER_DATE")
 	private Date orderDate;
-	
 
 	public Transactions() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	
-	
 }

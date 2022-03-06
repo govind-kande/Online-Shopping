@@ -22,25 +22,23 @@ import com.lti.appl.services.UserServiceImpl;
 @RequestMapping("/user")
 public class UserController {
 
-
 	@Autowired private UserServiceImpl userService;
 
 	//http://localhost:8080/register/listAll
 	@GetMapping("/listAll")
 	public List<User> listAllUsers() {
 		return userService.listAllUsers();
-
 	}
 
 	@PostMapping("/register/addUser")
-	public void addUser(@RequestBody User r){
+	public void addUser(@RequestBody User r) {
 		userService.addUser(r);	
 	}
 	
 	//http://localhost:8080/register/getUser/101
-	  @GetMapping("/getUserByMailId/{mailId}") 
-	  public User getUserByMailId(@PathVariable(value = "mailId") String mailId) { 
-		  return userService.getUserByMailId(mailId);
-	  }
+	@GetMapping("/getUserByMailId/{mailId}") 
+	public User getUserByMailId(@PathVariable(value = "mailId") String mailId) { 
+		return userService.getUserByMailId(mailId);
+	}
 
 }

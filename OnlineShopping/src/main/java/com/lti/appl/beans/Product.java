@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
-
 @Entity
 @Table(name="PRODUCT")
 public class Product {
@@ -34,7 +32,6 @@ public class Product {
 
 	@Column(name="IMAGE")
 	private String image;
-	
 
 	public Product(int productId, String brand, String productType, double price, String category, String image) {
 		super();
@@ -88,7 +85,6 @@ public class Product {
 		return price;
 	}
 
-
 	public void setPrice(double price) {
 		this.price = price;
 	}
@@ -104,7 +100,6 @@ public class Product {
 	public String getImage() {
 		return image;
 	}
-
 
 	public void setImage(String image) {
 		this.image = image;

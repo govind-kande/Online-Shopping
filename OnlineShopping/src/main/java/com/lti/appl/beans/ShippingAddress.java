@@ -14,12 +14,9 @@ import org.hibernate.annotations.GenericGenerator;
 public class ShippingAddress { //FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER ID
 	
 	@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)	
-	
 	@Column(name="USER_ID")
 	private int userId;
-	
-	
+
 	@Column(name="FNAME")
 	private String fName;
 	
@@ -46,7 +43,6 @@ public class ShippingAddress { //FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER ID
 
 	public ShippingAddress() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	
@@ -64,8 +60,6 @@ public class ShippingAddress { //FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER ID
 		this.emailID = emailID;
 		this.mobileNo = mobileNo;
 	}
-
-
 
 	public int getUserId() {
 		return userId;
@@ -135,19 +129,7 @@ public class ShippingAddress { //FULL_NAME, MAIL_ID, PASSWORD, MOBILE_NUMBER ID
 		return mobileNo;
 	}
 
-
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
-
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
 }

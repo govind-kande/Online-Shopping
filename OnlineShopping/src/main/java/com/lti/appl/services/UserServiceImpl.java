@@ -26,18 +26,15 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public List<User> listAllUsers() {
-		List<User> regList=dao.listAllUsers();
-		return regList;
+		return dao.listAllUsers();
 	}
 
 	@Override
 	public int addUser(User r) {
-		int ID=dao.addUser(r);		
-		return ID;
+		return dao.addUser(r);
 	}
 
 	@Override public User getUserByMailId(String mailId) {
 		return dao.getUserByMailId(mailId);
 	}
-
 }
