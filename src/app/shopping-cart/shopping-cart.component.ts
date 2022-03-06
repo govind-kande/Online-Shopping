@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product/Product';
 import { ShoppingCartProduct } from './shopping-cart-product';
 
 @Component({
@@ -9,7 +8,7 @@ import { ShoppingCartProduct } from './shopping-cart-product';
 })
 export class ShoppingCartComponent implements OnInit {
   productArray: ShoppingCartProduct[] = JSON.parse(sessionStorage.getItem('cartProductArray')!);
-  orderAmount: number = parseInt(sessionStorage.getItem('orderAmount')!)
+  orderAmount: number = parseInt(sessionStorage.getItem('orderAmount')!);
 
   ngOnInit(): void {}
 
