@@ -1,4 +1,5 @@
 <div class="container py-5">
+  <form [formGroup]="shippingAddressForm">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col">
         <div class="card my-4 shadow-3">
@@ -12,67 +13,72 @@
             <div class="col-xl-6">
               <div class="card-body p-md-5 text-black">
                 <h3 class="mb-4 text-uppercase">Shipping Address</h3>
-  
+                <div class="form-group">
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                      <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                      <input type="text" #fname id="form3Example1m" class="form-control form-control-lg" formControlName="fname"/>
                       <label class="form-label" for="form3Example1m">First name</label>
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                      <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="lname" />
                       <label class="form-label" for="form3Example1n">Last name</label>
                     </div>
                   </div>
                 </div>
-  
+              </div>
+              <div class="form-group">
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" formControlName="address" />
                   <label class="form-label" for="form3Example8">Address</label>
                 </div>
-  
-  
-  
+                </div>
+                <div class="form-group">
                 <div class="row">
                   <div class="col-md-6 mb-4">
-  
-                    <select class="select">
-                      <option value="1">State</option>
-                      <option value="2">Option 1</option>
-                      <option value="3">Option 2</option>
-                      <option value="4">Option 3</option>
-                    </select>
-  
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="state"/>
+                      <label class="form-label" for="form3Example1m">State</label>
+                    </div>
                   </div>
                   <div class="col-md-6 mb-4">
-  
-                    <select class="select">
-                      <option value="1">City</option>
-                      <option value="2">Option 1</option>
-                      <option value="3">Option 2</option>
-                      <option value="4">Option 3</option>
-                    </select>
-  
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="city" />
+                      <label class="form-label" for="form3Example1n">City</label>
+                    </div>
+                  </div>                                   
+                </div>
+                </div>
+                <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="zip"/>
+                      <label class="form-label" for="form3Example1m">Zip</label>
+                    </div>
                   </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="mobileno" />
+                      <label class="form-label" for="form3Example1n">Mobile Number</label>
+                    </div>
+                  </div>                                 
                 </div>
-  
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example3" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example3">Zip</label>
                 </div>
-  
+                <div class="form-group">
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example2" class="form-control form-control-lg" />
+                  <input type="text" id="form3Example2" class="form-control form-control-lg" formControlName="email"/>
                   <label class="form-label" for="form3Example2">Email</label>
+                </div>
                 </div>
                 <h6>
                 <p>Note:COD Option<br><i>  By default we are providing Cash on Delivery</i></p></h6>
 
                 <div class="d-flex justify-content-end pt-3">
                   <button type="button" class="btn btn-success btn-lg ms-2"
-                    style="background-color:hsl(210, 100%, 50%) ">Confirm Order</button>
+                    style="background-color:hsl(210, 100%, 50%) " (click)='placeOrder()'>Confirm Order</button>
                 </div>
   
               </div>
@@ -81,4 +87,5 @@
         </div>
       </div>
     </div>
+  </form>
   </div>
