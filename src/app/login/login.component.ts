@@ -41,6 +41,8 @@ export class LoginComponent implements OnInit {
             sessionStorage.setItem('loggedInUsername', result.fName);
             console.log(result.id);
             sessionStorage.setItem('loggedInUserId', `${result.id}`);
+            sessionStorage.setItem('orderAmount', '0');
+            sessionStorage.setItem('cartProductArray', JSON.stringify([]));
             this.router.navigate(['home']);
           } else {
             this.invalidLogin = true;

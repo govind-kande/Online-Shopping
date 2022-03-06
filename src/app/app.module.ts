@@ -7,11 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
-import { MenDashboardComponent } from './men-dashboard/men-dashboard.component';
-import { WomenDashboardComponent } from './women-dashboard/women-dashboard.component';
-import { KidsDashboardComponent } from './kids-dashboard/kids-dashboard.component';
 import { HomeDashboardComponent } from './home-dashboard/home-dashboard.component';
-import { BeautyDashboardComponent } from './beauty-dashboard/beauty-dashboard.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { LogoutComponent } from './logout/logout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,11 +26,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     HomeComponent,
     LoginComponent,
     RegistrationComponent,
-    MenDashboardComponent,
-    WomenDashboardComponent,
-    KidsDashboardComponent,
     HomeDashboardComponent,
-    BeautyDashboardComponent,
     ViewproductComponent,
     LogoutComponent,
     ShoppingCartComponent,

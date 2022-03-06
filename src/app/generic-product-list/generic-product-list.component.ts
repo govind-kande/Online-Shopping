@@ -16,16 +16,16 @@ export class GenericProductListComponent implements OnInit {
   sub: any;
 
   constructor(
-    private ar: ActivatedRoute,
-    private r: Router,
-    private service: ProductListService
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private productListService: ProductListService
   ) {}
 
   ngOnInit() {
-    this.sub = this.ar.paramMap.subscribe((params) => {
+    this.sub = this.activatedRoute.paramMap.subscribe((params) => {
       this.category = params.get('category');
       this.productType = params.get('productType');
-      this.service
+      this.productListService
         .getProduct(this.category, this.productType)
         .subscribe((data) => {
           this.prodList = Object.values(data);
@@ -36,18 +36,13 @@ export class GenericProductListComponent implements OnInit {
 
   addToCart(product: Product): void {
     const shoppingCartProduct = new ShoppingCartProduct(product.brand, product.productType, product.price, product.category, product.image, product.id, 1);
-    const currentCartArray = sessionStorage.getItem('cartProductArray');
-    if (currentCartArray) {
-      const cartProductArray: ShoppingCartProduct[] = JSON.parse(sessionStorage.getItem('cartProductArray')!);
-      if (cartProductArray && cartProductArray.length > 0) {
-        cartProductArray.push(shoppingCartProduct);
-        sessionStorage.setItem('cartProductArray', JSON.stringify(cartProductArray));
-      }
-    } else {
-      sessionStorage.setItem('cartProductArray', JSON.stringify([shoppingCartProduct]));
+    const cartProductArray: ShoppingCartProduct[] = JSON.parse(sessionStorage.getItem('cartProductArray')!);
+    if (cartProductArray) {
+      cartProductArray.push(shoppingCartProduct);
+      sessionStorage.setItem('cartProductArray', JSON.stringify(cartProductArray));
     }
 
-    const orderAmount = sessionStorage.getItem('orderAmount') != undefined ? parseInt(sessionStorage.getItem('orderAmount')!) : product.price;
+    const orderAmount = parseInt(sessionStorage.getItem('orderAmount')!) + product.price;
     sessionStorage.setItem('orderAmount', `${orderAmount}`);
     window.location.href=("shoppingcart");
   }
