@@ -80,11 +80,9 @@
                     <label class="form-label" for="form3Example2">Email</label>
                   </div>
                 </div>
-                <h6>
-                  <p>Note:COD Option<br><i> By default we are providing Cash on Delivery</i></p>
-                </h6>
+                
                 <div class="d-flex justify-content-end pt-3">
-                  <input type="submit" class="btn btn-success btn-lg ms-2" style="background-color:hsl(210, 100%, 50%) "
+                  <input type="submit" class="btn btn-success btn-lg ms-2" [disabled]="!shippingDetailsForm.valid" style="background-color:hsl(210, 100%, 50%) "
                     value="Confirm Order">
                 </div>
               </div>
