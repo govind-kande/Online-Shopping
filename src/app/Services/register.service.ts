@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { forgotpassword } from '../forgot-password/forgotpassword';
 import { Login } from '../login/Login';
 import { Register } from '../registration/Register';
@@ -22,8 +23,15 @@ export class RegisterService {
     return this.httpSer.post<Register>(this.baseURL + "/register/addUser", userData);
   }
 
-  public getUserByMailId(mailId: string) {
+  /*public getUserByMailId(mailId: string) {
     return this.httpSer.get<Register>(this.baseURL + "/getUserByMailId/" + mailId);
+  }*/
+  public getUserByMailId(mailId:string):Observable<Register> {
+    if(localStorage.getItem('username')){
+      return this.httpSer.get<Register>(this.baseURL+"/getUserByMailId/" + localStorage.getItem('username'));
+    }else{
+    return this.httpSer.get<Register>(this.baseURL+"/getUserByMailId/" + mailId);
+    }
   }
 
   public updatePassword(mailId : string, password: string) {

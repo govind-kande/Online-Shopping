@@ -1,0 +1,33 @@
+
+<div class="col-md-6 offset-md-3">    
+
+    <h3>Update Profile</h3>
+  <form  #userForm="ngForm" (ngSubmit)="upddateUser(userForm)">
+      
+    <div class="form-group">
+          <label>Name</label>
+          <input type="text" reuired class="form-control" id="Name" 
+                [(ngModel)]="users.fName" name="fName">
+              
+      <div class="form-group">
+          <label>MailId</label>
+          <input type="text" class="form-control" id="Mail" [(ngModel)]="users.mailId"
+               name="mailId" >
+      </div>
+      <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="text" class="form-control" id="mobileNo"  [(ngModel)]="users.mobileNo"
+                name="mobileNo" >
+      </div>
+      
+
+      
+        <div><button >Save</button><button  [routerLink]="['/viewprofile']">cancel</button></div>
+         
+         
+     
+</div>
+ 
+
+
+    

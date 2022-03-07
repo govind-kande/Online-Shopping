@@ -17,6 +17,11 @@ export class AppComponent {
 
   constructor(private regService: RegisterService, private router: Router) {}
   ngOnInit(): void {}
+  loggedin()
+{
+  this.loggedinUser=localStorage.getItem("username");
+  return this.loggedinUser;
+}
   getUserName() {
     return sessionStorage.getItem('loggedInUsername');
   }

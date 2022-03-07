@@ -18,6 +18,8 @@ import { ProductComponent } from './product/product.component';
 import { GenericProductListComponent } from './generic-product-list/generic-product-list.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ViewprofileComponent } from './viewprofile/viewprofile.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 
 
 
@@ -36,6 +38,8 @@ import { PaymentComponent } from './payment/payment.component';
     GenericProductListComponent,
     ForgotPasswordComponent,
     PaymentComponent,
+    ViewprofileComponent,
+    UpdateprofileComponent,
    
    
   ],

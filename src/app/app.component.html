@@ -81,13 +81,13 @@
           <div *ngIf="getUserName()" class="dropdown dropdown_menu-1" dropdown>
             <li href="#" dropdownToggle (click)="false"><i class="fa fa-user"
                 style="font-size:30px;color:rgb(255, 0, 149)"></i>
-              Welcome {{getUserName()}}
+              Welcome {{loggedinUser}}
             </li>
             <!-- <div *dropdownMenu> -->
 
               <ul class="dropdown_menu dropdown_menu-1" dropdown>
                 <li class="dropdown_item-1" href="#">Dashboard</li>
-                <li class="dropdown_item-2" href="#">profile</li>
+                <li class="dropdown_item-2" [routerLink]="['/viewprofile']">profile</li>
                 <li class="dropdown_item-3" [routerLink]="['ForgotPassword']">Change password</li>
                 <li class="fas fa-sign-out-alt" class="dropdown_item-4" (click)='onLogout()'>Log out</li>
               </ul>
