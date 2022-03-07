@@ -1,89 +1,97 @@
 <div class="container py-5">
-    <div class="row d-flex justify-content-center align-items-center">
-      <div class="col">
-        <div class="card my-4 shadow-3">
-          <div class="row g-0">
-            <div class="col-xl-6 d-xl-block bg-image">
-              <img src="assets/images/shipping_image.png" alt="Sample photo" class="img-fluid" />
-              <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-  
-              </div>
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col">
+      <div class="card my-4 shadow-3">
+        <div class="row g-0">
+          <div class="col-xl-6 d-xl-block bg-image">
+            <img src="assets/images/shipping_image.png" alt="Sample photo" class="img-fluid" />
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
             </div>
-            <div class="col-xl-6">
+          </div>
+          <div class="col-xl-6">
+            <form [formGroup]="shippingDetailsForm" (ngSubmit)="addShippingDetails()">
               <div class="card-body p-md-5 text-black">
                 <h3 class="mb-4 text-uppercase">Shipping Address</h3>
                 <div class="form-group">
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" #fname id="form3Example1m" class="form-control form-control-lg" formControlName="fname"/>
-                      <label class="form-label" for="form3Example1m">First name</label>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg"
+                          formControlName="fname" id="fname" />
+                        <label class="form-label" for="form3Example1m">First Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg"
+                          formControlName="lname" id="lname" />
+                        <label class="form-label" for="form3Example1n">Last Name</label>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="lname" />
-                      <label class="form-label" for="form3Example1n">Last name</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example8" class="form-control form-control-lg" formControlName="address" />
-                  <label class="form-label" for="form3Example8">Address</label>
-                </div>
                 </div>
                 <div class="form-group">
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="state"/>
-                      <label class="form-label" for="form3Example1m">State</label>
-                    </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example8" class="form-control form-control-lg" formControlName="address"
+                      id="address" />
+                    <label class="form-label" for="form3Example8">Address</label>
                   </div>
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="city" />
-                      <label class="form-label" for="form3Example1n">City</label>
-                    </div>
-                  </div>                                   
-                </div>
                 </div>
                 <div class="form-group">
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="zip"/>
-                      <label class="form-label" for="form3Example1m">Zip</label>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg"
+                          formControlName="state" id="state" />
+                        <label class="form-label" for="form3Example1m">State</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg"
+                          formControlName="city" id="city" />
+                        <label class="form-label" for="form3Example1n">City</label>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="mobileno" />
-                      <label class="form-label" for="form3Example1n">Mobile Number</label>
-                    </div>
-                  </div>                                 
-                </div>
                 </div>
                 <div class="form-group">
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example2" class="form-control form-control-lg" formControlName="email"/>
-                  <label class="form-label" for="form3Example2">Email</label>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg"
+                          formControlName="zip" id="zip" />
+                        <label class="form-label" for="form3Example1m">Zip</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg"
+                          formControlName="mobileno" id="mobileno" />
+                        <label class="form-label" for="form3Example1n">Mobile Number</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="form-group">
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example2" class="form-control form-control-lg" formControlName="email"
+                      id="email" />
+                    <label class="form-label" for="form3Example2">Email</label>
+                  </div>
                 </div>
                 <h6>
-                <p>Note:COD Option<br><i>  By default we are providing Cash on Delivery</i></p></h6>
-
+                  <p>Note:COD Option<br><i> By default we are providing Cash on Delivery</i></p>
+                </h6>
                 <div class="d-flex justify-content-end pt-3">
-                  <button type="button" class="btn btn-success btn-lg ms-2"
-                    style="background-color:hsl(210, 100%, 50%) ">Confirm Order</button>
+                  <input type="submit" class="btn btn-success btn-lg ms-2" style="background-color:hsl(210, 100%, 50%) "
+                    value="Confirm Order">
                 </div>
-  
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

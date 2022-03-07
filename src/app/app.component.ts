@@ -17,13 +17,20 @@ export class AppComponent {
 
   constructor(private regService: RegisterService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(Number.isNaN(parseInt(sessionStorage.getItem('loggedInUserId')!))){
+      this.router.navigate(['/login']);
+    }
+  }
 
   getUserName() {
     return sessionStorage.getItem('loggedInUsername');
   }
   onLogout() {
     sessionStorage.removeItem('loggedInUsername');
+    sessionStorage.removeItem('loggedInUserId');
+    sessionStorage.removeItem('cartProductArray');
+    sessionStorage.removeItem('orderAmount');
     swal('you have successfully logged out');
     this.router.navigate(['/login']);
   }

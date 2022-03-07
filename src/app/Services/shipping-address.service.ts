@@ -11,6 +11,6 @@ baseURL: string = "http://localhost:8080/shippingaddress";
   constructor(private httpSer: HttpClient) { }
 
   public addShippingDetails(shippingDetails: ShippingAddress) {
-    return this.httpSer.post<ShippingAddress>(this.baseURL + "/addUser", shippingDetails);
+    return this.httpSer.post<ShippingAddress>(this.baseURL + "/addShippingDetails", shippingDetails);
   }
 }
