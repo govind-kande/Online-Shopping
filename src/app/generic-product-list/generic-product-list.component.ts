@@ -42,8 +42,10 @@ export class GenericProductListComponent implements OnInit {
       sessionStorage.setItem('cartProductArray', JSON.stringify(cartProductArray));
     }
 
-    const orderAmount = parseInt(sessionStorage.getItem('orderAmount')!) + product.price;
-    sessionStorage.setItem('orderAmount', `${orderAmount}`);
+    let orderAmount = parseInt(sessionStorage.getItem('orderAmount')!);
+    const amount = orderAmount ? orderAmount += product.price : product.price;
+    sessionStorage.setItem('orderAmount', `${amount}`);
+    sessionStorage.setItem('cartProductArray', JSON.stringify([shoppingCartProduct]));
     window.location.href=("shoppingcart");
   }
 }

@@ -45,8 +45,9 @@ export class ShippingAddressComponent implements OnInit {
       shippingDetailsFormValue.state,
       shippingDetailsFormValue.city,
       shippingDetailsFormValue.zip,
-      shippingDetailsFormValue.mobileno,
-      shippingDetailsFormValue.email
+      shippingDetailsFormValue.email,
+      shippingDetailsFormValue.mobileno
+      
     );
 
     this.shippingservice
@@ -64,8 +65,9 @@ export class ShippingAddressComponent implements OnInit {
       state: ['', Validators.required],
       city: ['', Validators.required],
       zip: ['', Validators.required],
-      mobileno: ['', Validators.required],
       email: ['', Validators.required],
+      mobileno: ['', Validators.required]
+     
     });
     
   }

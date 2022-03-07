@@ -8,8 +8,8 @@ import { ShoppingCartProduct } from './shopping-cart-product';
 })
 export class ShoppingCartComponent implements OnInit {
   productArray: ShoppingCartProduct[] = JSON.parse(sessionStorage.getItem('cartProductArray')!);
-  orderAmount: number = parseInt(sessionStorage.getItem('orderAmount')!);
-
+  orderAmount: number = parseInt(sessionStorage.getItem('orderAmount') || '0');
+ 
   ngOnInit(): void {}
 
   inc(prod: ShoppingCartProduct) {
@@ -21,10 +21,20 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   dec(prod: ShoppingCartProduct) {
-    if (prod.qty > 1) {
+    if (prod.qty) {
       prod.qty -= 1;
-      sessionStorage.setItem('orderAmount', `${this.orderAmount -= prod.price}`);
+      if (prod.qty == 0) {
+        const newProductArray: ShoppingCartProduct[] = [];
+        this.productArray.map(val => {
+          if (val != prod) {
+              newProductArray.push(val);
+          }
+        });
+        this.productArray = newProductArray;
+        sessionStorage.setItem('cartProductArray', JSON.stringify(newProductArray));
+      }
       sessionStorage.setItem('cartProductArray', JSON.stringify(this.productArray));
+      sessionStorage.setItem('orderAmount', `${this.orderAmount -= prod.price}`);
     }
   }
 }
