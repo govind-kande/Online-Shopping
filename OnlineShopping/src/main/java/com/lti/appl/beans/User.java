@@ -42,6 +42,14 @@ public class User {
 		this.password = password;
 		this.mobileNo = mobileNo;
 	}
+	
+
+	public User(String fName, String mailId, String mobileNo) {
+		super();
+		this.fName = fName;
+		this.mailId = mailId;
+		this.mobileNo = mobileNo;
+	}
 
 	public int getId() {
 		return Id;

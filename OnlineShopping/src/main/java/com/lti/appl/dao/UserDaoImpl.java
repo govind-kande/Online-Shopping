@@ -48,4 +48,28 @@ public class UserDaoImpl implements UserDao{
 		Query qry= em.createQuery("select r from User r WHERE mail_Id = '" + mailId +"'");
 		return (User)qry.getSingleResult();
 	}
+	@Override
+	public User getUserById(int Id) {
+
+		System.out.println("dao ");
+		
+		User e=em.find(User.class,Id);
+		
+		return e;
+	}
+	@Override
+	@Transactional
+	public String updateUser(String mailId,User usr)  {
+		Query qry= em.createQuery("select r.id from User r WHERE mail_Id = '" + mailId +"'");
+		int Id=(int)qry.getSingleResult();
+		System.out.println(Id);
+		User ud=em.find(User.class, Id);
+		System.out.println(usr.getfName());
+		ud.setfName(usr.getfName());
+		ud.setMailId(usr.getMailId());
+		ud.setMobileNo(usr.getMobileNo());
+		em.merge(ud);
+		return usr.getMailId();
+			
+	}
 }

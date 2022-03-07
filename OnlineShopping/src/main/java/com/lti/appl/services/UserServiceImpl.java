@@ -37,4 +37,15 @@ public class UserServiceImpl implements UserService{
 	@Override public User getUserByMailId(String mailId) {
 		return dao.getUserByMailId(mailId);
 	}
+	@Override
+	public User getUserById(int Id) {
+	System.out.println("service ");
+	User e=dao.getUserById(Id);
+	return e;
+	}
+	@Override
+	public String updateUser(String mailId,User usr) {
+	 return dao.updateUser(mailId, usr);	
+	}
+	
 }

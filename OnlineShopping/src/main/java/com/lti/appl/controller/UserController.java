@@ -40,5 +40,14 @@ public class UserController {
 	public User getUserByMailId(@PathVariable(value = "mailId") String mailId) { 
 		return userService.getUserByMailId(mailId);
 	}
+	 @GetMapping("/getUserById/{id}")
+		public User getUserById(@PathVariable (value="id")int id) {
+	        return userService.getUserById(id);
+	}
+	 @PutMapping("/updateUser/{mailId}")
+		public String updateUser(@PathVariable (value="mailId")String mailId, @RequestBody User usr) 
+		{
+			return userService.updateUser(mailId,usr);
+		}
 
 }
