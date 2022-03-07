@@ -29,15 +29,4 @@ export class RegisterService {
   public updatePassword(mailId : string, password: string) {
     return this.httpSer.put<any>(this.baseURL + "/updatePassword/'" +mailId+"'/"+password, password);
   }
-
-
-
-
-  // public forgotPassword1(password:string) {
-  //   return this.httpSer.put<forgotpassword>(this.baseURL + "/forgotPassowrd/" + password);
-  // }
-
-  // public forgotPassword1(id:number, pass:string){
-  //   return this.httpSer.put<forgotpassword>(this.baseURL + "/forgotPassword/" + id +"/"+ pass);
-  // }
 }

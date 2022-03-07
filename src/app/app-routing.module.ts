@@ -21,10 +21,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'shoppingcart', component: ShoppingCartComponent },
   { path: 'shippingaddress', component: ShippingAddressComponent },
-  {
-    path: 'dashboard/:category/:productType',
-    component: GenericProductListComponent,
-  },
+  {path: 'dashboard/:category/:productType',component: GenericProductListComponent},
   { path: 'ForgotPassword', component: ForgotPasswordComponent },
 ];
 

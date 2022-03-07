@@ -17,11 +17,7 @@ export class AppComponent {
 
   constructor(private regService: RegisterService, private router: Router) {}
 
-  ngOnInit(): void {
-    if(Number.isNaN(parseInt(sessionStorage.getItem('loggedInUserId')!))){
-      this.router.navigate(['/login']);
-    }
-  }
+  ngOnInit(): void {}
 
   getUserName() {
     return sessionStorage.getItem('loggedInUsername');
