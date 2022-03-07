@@ -52,7 +52,7 @@ export class ShippingAddressComponent implements OnInit {
     this.shippingservice
       .addShippingDetails(shippingDetails)
       .subscribe((data) => {
-        //window.location.href=("login")
+        this.router.navigate(['/payment']);
       });
   }
 
@@ -67,5 +67,7 @@ export class ShippingAddressComponent implements OnInit {
       mobileno: ['', Validators.required],
       email: ['', Validators.required],
     });
+    
   }
+
 }

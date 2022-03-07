@@ -17,6 +17,7 @@ import { ShippingAddressComponent } from './shipping-address/shipping-address.co
 import { ProductComponent } from './product/product.component';
 import { GenericProductListComponent } from './generic-product-list/generic-product-list.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 
@@ -34,6 +35,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     ProductComponent,
     GenericProductListComponent,
     ForgotPasswordComponent,
+    PaymentComponent,
    
    
   ],

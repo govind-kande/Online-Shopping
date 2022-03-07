@@ -6,6 +6,7 @@ import { HomeDashboardComponent } from './home-dashboard/home-dashboard.componen
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { PaymentComponent } from './payment/payment.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'shippingaddress', component: ShippingAddressComponent },
   {path: 'dashboard/:category/:productType',component: GenericProductListComponent},
   { path: 'ForgotPassword', component: ForgotPasswordComponent },
+  {path:'payment',component:PaymentComponent}
 ];
 
 @NgModule({

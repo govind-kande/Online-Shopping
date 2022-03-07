@@ -13,12 +13,10 @@ export class AppComponent {
   loggedinUser: any;
   email: any;
   LoggenInUserName: any;
-  categoryType:any;
+  categoryType: any;
 
   constructor(private regService: RegisterService, private router: Router) {}
-
   ngOnInit(): void {}
-
   getUserName() {
     return sessionStorage.getItem('loggedInUsername');
   }
