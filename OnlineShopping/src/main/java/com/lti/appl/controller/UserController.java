@@ -37,7 +37,7 @@ public class UserController {
 	
 	//http://localhost:8080/register/getUser/101
 	@GetMapping("/getUserByMailId/{mailId}") 
-	public User getUserByMailId(@PathVariable(value = "mailId") String mailId) { 
+	public User getUserByMailId(@PathVariable(value = "mailId") String mailId) throws CustomEmpException { 
 		return userService.getUserByMailId(mailId);
 	}
 	 @GetMapping("/getUserById/{id}")

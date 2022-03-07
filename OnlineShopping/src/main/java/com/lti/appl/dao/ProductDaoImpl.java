@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.lti.appl.beans.Product;
 import com.lti.appl.beans.User;
+import com.lti.appl.exceptions.CustomEmpException;
 
 @Repository
 public class ProductDaoImpl implements ProductDao{
@@ -31,14 +32,17 @@ public class ProductDaoImpl implements ProductDao{
 
 
 	@Override
-	public List<Product> getProduct(String category, String productType) {
-		if (category == null) {
-			// throw 
+	public List<Product> getProduct(String category, String productType) throws CustomEmpException {
+		if (category != null) {
+			Query qry= em.createQuery("select p from Product p WHERE category = '" + category +"' and productType = '" + productType +"'");
+			List<Product> product=qry.getResultList();
+			return product;
+		}
+		else{
+			throw new CustomEmpException("Invalid product");
 		}
 
-		Query qry= em.createQuery("select p from Product p WHERE category = '" + category +"' and productType = '" + productType +"'");
-		List<Product> product=qry.getResultList();
-		return product;
+		
 
 	}
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.lti.appl.beans.Product;
+import com.lti.appl.exceptions.CustomEmpException;
 import com.lti.appl.services.ProductServiceImpl;
 
 @CrossOrigin(origins = "*")
@@ -23,7 +24,7 @@ public class ProductController {
 	}
 	
 	@GetMapping("/getProduct/{category}/{productType}")
-	public List<Product> getProduct(@PathVariable(value = "category") String category, @PathVariable(value = "productType") String productType) {
+	public List<Product> getProduct(@PathVariable(value = "category") String category, @PathVariable(value = "productType") String productType) throws CustomEmpException {
 		return productServiceImpl.getProduct(category,productType);
 	}
 }

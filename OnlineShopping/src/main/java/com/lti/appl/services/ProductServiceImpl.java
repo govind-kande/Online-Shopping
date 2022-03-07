@@ -9,6 +9,7 @@ import com.lti.appl.beans.Product;
 import com.lti.appl.beans.User;
 import com.lti.appl.dao.ProductDao;
 import com.lti.appl.dao.UserDao;
+import com.lti.appl.exceptions.CustomEmpException;
 
 @Service("productService")
 public class ProductServiceImpl implements ProductService{
@@ -32,7 +33,7 @@ public class ProductServiceImpl implements ProductService{
 
 
 	@Override
-	public List<Product> getProduct(String category, String productType) {
+	public List<Product> getProduct(String category, String productType) throws CustomEmpException {
 		
 		return productDao.getProduct(category,productType);
 	}

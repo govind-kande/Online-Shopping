@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService{
 		return dao.addUser(r);
 	}
 
-	@Override public User getUserByMailId(String mailId) {
+	@Override public User getUserByMailId(String mailId) throws CustomEmpException {
 		return dao.getUserByMailId(mailId);
 	}
 	@Override

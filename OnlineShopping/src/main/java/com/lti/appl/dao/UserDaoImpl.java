@@ -40,13 +40,17 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public User getUserByMailId(String mailId) {
-		if (mailId == null) {
-			// throw 
+	public User getUserByMailId(String mailId) throws CustomEmpException {
+		if (mailId != null) {
+			Query qry= em.createQuery("select r from User r WHERE mail_Id = '" + mailId +"'");
+			return (User)qry.getSingleResult();
+		}
+		else
+		{
+			throw new CustomEmpException("User does not exist");
 		}
 
-		Query qry= em.createQuery("select r from User r WHERE mail_Id = '" + mailId +"'");
-		return (User)qry.getSingleResult();
+		
 	}
 	@Override
 	public User getUserById(int Id) {
