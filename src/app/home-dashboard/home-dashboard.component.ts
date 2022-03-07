@@ -9,7 +9,5 @@ export class HomeDashboardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

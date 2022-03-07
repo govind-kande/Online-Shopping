@@ -10,20 +10,22 @@ import swal from 'Sweetalert';
 })
 export class AppComponent {
   username: any;
-  loggedinUser = sessionStorage.getItem("loggedInUsername");;
+  loggedinUser = sessionStorage.getItem('loggedInUsername');
   email: any;
   LoggenInUserName: any;
   categoryType: any;
 
   constructor(private regService: RegisterService, private router: Router) {}
   ngOnInit(): void {}
-  loggedin()
-{
-  return localStorage.getItem("username");
-}
+
+  loggedin() {
+    return localStorage.getItem('username');
+  }
+
   getUserName() {
     return sessionStorage.getItem('loggedInUsername');
   }
+
   onLogout() {
     sessionStorage.removeItem('loggedInUsername');
     sessionStorage.removeItem('loggedInUserId');

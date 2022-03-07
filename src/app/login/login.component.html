@@ -1,46 +1,80 @@
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6 col-md-7 intro-section">
-            <div class="brand-wrapper">
-                <img src="assets/images/loginImage.png">
-            </div>
-            
-           
-        </div>
-        <div class="col-sm-6 col-md-5 form-section">
-            <div class="login-wrapper">
-                <h2 class="login-title">Sign in</h2> 
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">											
-                    <div class="form-group">											
-                      <label for="email" class="sr-only">Email address:</label>											
-                      <input type="email" class="form-control" placeholder="Email" formControlName="email" id="email">											
-                      <div *ngIf="submitted && loginForm.controls.email.errors" class="error">											
-                        <div class="text-danger" *ngIf="loginForm.controls.email.errors.required">Email is required</div>											
-                      </div>											
-                                                                  
-                    </div>											
-                    <div class="form-group mb-3">											
-                      <label for="pwd" class="sr-only" >Password:</label>											
-                      <input type="password" class="form-control" placeholder="Password" formControlName="password" id="pwd">											
-                      <div *ngIf="submitted && loginForm.controls.password.errors" class="error">											
-                        <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password is required</div>											
-                      </div>											
-                    </div>			
-                    						
-                    <button class="btn btn-success" [disabled]="!loginForm.valid">Login</button> &nbsp; &nbsp;
-                    											
-                    <br/><br/>											
-                    <div *ngIf="invalidLogin" class="error">											
-                      <div class="text-danger">Invalid credentials.</div>											
-                    </div>											
-                  </form>			
-                <p class="login-wrapper-footer-text">Need an account? <a [routerLink]="['/registration']" class="text-reset">Signup here</a></p>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-7 intro-section">
+      <div class="brand-wrapper">
+        <img src="assets/images/loginImage.png" />
+      </div>
     </div>
+    <div class="col-sm-6 col-md-5 form-section">
+      <div class="login-wrapper">
+        <h2 class="login-title">Sign in</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="email" class="sr-only">Email address:</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+              id="email"
+            />
+            <div
+              *ngIf="submitted && loginForm.controls.email.errors"
+              class="error"
+            >
+              <div
+                class="text-danger"
+                *ngIf="loginForm.controls.email.errors.required"
+              >
+                Email is required
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="pwd" class="sr-only">Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              formControlName="password"
+              id="pwd"
+            />
+            <div
+              *ngIf="submitted && loginForm.controls.password.errors"
+              class="error"
+            >
+              <div
+                class="text-danger"
+                *ngIf="loginForm.controls.password.errors.required"
+              >
+                Password is required
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-success" [disabled]="!loginForm.valid">
+            Login
+          </button>
+          &nbsp; &nbsp;
+
+          <br /><br />
+          <div *ngIf="invalidLogin" class="error">
+            <div class="text-danger">Invalid credentials.</div>
+          </div>
+        </form>
+        <p class="login-wrapper-footer-text">
+          Need an account?
+          <a [routerLink]="['/registration']" class="text-reset">Signup here</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
