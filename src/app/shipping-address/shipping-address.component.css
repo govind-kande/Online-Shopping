@@ -1,3 +1,44 @@
+.checkout-steps {
+  margin: 0 0 0 34%;
+  width: 40%;
+  color: #696B79;
+  padding: 0;
+  display: inline-block;
+  line-height: 20px;
+}
+.checkout-steps .step1 {
+  margin: 0 5px 0 0;
+}
+
+.checkout-steps .step {
+  display: inline-block;
+  letter-spacing: 3px;
+}
+
+.checkout-steps .divider {
+  display: inline-block;
+  border-top: 1px dashed #696B79;
+  height: 4px;
+  width: 10%;
+}
+.checkout-steps .active {
+  color: #20BD99;
+  border-bottom: 2px solid #20BD99;
+}
+
+.checkout-steps .step2 {
+  margin: 0 5px 0 6px;
+}
+.checkout-steps .step3 {
+  margin: 0 0 0 7px;
+}
+
+.checkout-steps .step {
+  display: inline-block;
+  letter-spacing: 3px;
+}
+
+
 .title-style{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;

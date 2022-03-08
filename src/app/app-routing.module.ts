@@ -10,7 +10,9 @@ import { PaymentComponent } from './payment/payment.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ShippingAddressComponent } from './shipping-address/shipping-address.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +26,10 @@ const routes: Routes = [
   { path: 'shippingaddress', component: ShippingAddressComponent },
   {path: 'dashboard/:category/:productType',component: GenericProductListComponent},
   { path: 'ForgotPassword', component: ForgotPasswordComponent },
-  {path:'payment',component:PaymentComponent}
+  {path:'payment',component:PaymentComponent},
+  {path:'viewprofile',component:ViewprofileComponent},
+  {path:'viewprofile/:mailId',component:ViewprofileComponent},
+  {path:'updateprofile',component:UpdateprofileComponent}
 ];
 
 @NgModule({

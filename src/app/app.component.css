@@ -408,6 +408,7 @@ html {
 
 .container {
   padding: 0 16px;
+  text-align: center;
 }
 
 .container::after, .row::after {

@@ -1,4 +1,4 @@
-<head>
+<!--<head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -44,3 +44,111 @@
         </div>
     </div>
 </div>
+
+<div class="container py-5">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col">
+      <div class="card my-4 shadow-3">
+        <div class="row g-0">
+          <div class="col-xl-6 d-xl-block bg-image">
+            <img src="assets/images/login.png" alt="Sample photo" class="img-fluid" />
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <h2 class="login-title">Sign in</h2> 											
+              <div class="form-group">											
+                <label for="email" class="sr-only">Email address:</label>											
+                <input type="email" class="form-control" placeholder="Email" formControlName="email" id="email">											
+                <div *ngIf="submitted && loginForm.controls.email.errors" class="error">											
+                  <div class="text-danger" *ngIf="loginForm.controls.email.errors.required">Email is required</div>											
+                </div>											
+                                                            
+              </div>											
+              <div class="form-group mb-3">											
+                <label for="pwd" class="sr-only" >Password:</label>											
+                <input type="password" class="form-control" placeholder="Password" formControlName="password" id="pwd">											
+                <div *ngIf="submitted && loginForm.controls.password.errors" class="error">											
+                  <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password is required</div>											
+                </div>											
+              </div>			
+                          
+              <button class="btn btn-success" [disabled]="!loginForm.valid">Login</button> &nbsp; &nbsp;
+                                    
+              <br/><br/>											
+              <div *ngIf="invalidLogin" class="error">											
+                <div class="text-danger">Invalid credentials.</div>											
+              </div>											
+            </form>			
+            <p class="login-wrapper-footer-text">Need an account? <a [routerLink]="['/registration']" class="text-reset">Signup here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+       
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fa fa-facebook"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fa fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fa fa-linkedin"></i>
+            </button>
+          </div>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">											
+            <div class="form-outline mb-4">											
+            <!--<label for="email" class="form-control form-control-lg">Email address:</label>-->											
+              <input type="email"  placeholder="Enter a valid email address" class="form-control form-control-lg"  formControlName="email" id="email">											
+              <div *ngIf="submitted && loginForm.controls.email.errors" class="error">											
+                <div class="text-danger" *ngIf="loginForm.controls.email.errors.required">Email is required</div>											
+              </div>											
+                                                          
+            </div>						
+          <!-- Email input -->
+          <!-- Password input -->
+          <div class="form-outline mb-3">											
+            <label for="pwd" class="sr-only" >Password:</label>											
+            <input type="password" class="form-control form-control-lg" placeholder="Enter password" formControlName="password" id="pwd">											
+            <div *ngIf="submitted && loginForm.controls.password.errors" class="error">											
+              <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password is required</div>											
+            </div>											
+          </div>			
+         
+            
+          <div class="text-center text-lg-start mt-4 pt-2">
+          <button  class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" [disabled]="!loginForm.valid">Login</button> &nbsp; &nbsp;
+        
+          <br/><br/>											
+          <div *ngIf="invalidLogin" class="error">											
+            <div class="text-danger">Invalid credentials.</div>											
+          </div>			
+          </div>
+        </form>
+        <p class="small fw-bold mt-2 pt-1 mb-0">Reset password  <a [routerLink]="['/ForgotPassword']" class="link-danger">Forget Password</a></p>
+        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account?  <a [routerLink]="['/registration']" class="link-danger">Signup here</a></p>
+        
+      </div>
+    </div>
+  </div>
+ 
+</section>

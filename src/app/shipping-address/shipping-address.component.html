@@ -1,10 +1,17 @@
 <div class="container py-5">
+  <div >
+    <ol class="checkout-steps"> 
+      <li class="step step1 clickable">CART</li>
+       <li class="divider"></li>
+        <li class="step step2 active">ADDRESS</li> 
+       <li class="divider"></li> <li class="step step3">PAYMENT</li> </ol>
+  </div>
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col">
       <div class="card my-4 shadow-3">
         <div class="row g-0">
           <div class="col-xl-6 d-xl-block bg-image">
-            <img src="assets/images/shipping_image.png" alt="Sample photo" class="img-fluid" />
+            <img src="assets/images/ship_add.gif" alt="Sample photo" class="img-fluid" />
             <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
             </div>
           </div>
@@ -64,6 +71,13 @@
                         <label class="form-label" for="form3Example1m">Zip</label>
                       </div>
                     </div>
+                    <div class="form-group">
+                      <div class="form-outline mb-4">
+                        <input type="text" id="form3Example2" class="form-control form-control-lg" formControlName="email"
+                          id="email" />
+                        <label class="form-label" for="form3Example2">Email</label>
+                      </div>
+                    </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
                         <input type="text" id="form3Example1n" class="form-control form-control-lg"
@@ -71,16 +85,8 @@
                         <label class="form-label" for="form3Example1n">Mobile Number</label>
                       </div>
                     </div>
-                  </div>
                 </div>
-                <div class="form-group">
-                  <div class="form-outline mb-4">
-                    <input type="text" id="form3Example2" class="form-control form-control-lg" formControlName="email"
-                      id="email" />
-                    <label class="form-label" for="form3Example2">Email</label>
-                  </div>
                 </div>
-                
                 <div class="d-flex justify-content-end pt-3">
                   <input type="submit" class="btn btn-success btn-lg ms-2" [disabled]="!shippingDetailsForm.valid" style="background-color:hsl(210, 100%, 50%) "
                     value="Confirm Order">

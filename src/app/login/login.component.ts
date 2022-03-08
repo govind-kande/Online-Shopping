@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         (result) => {
           if (this.loginForm.controls.email.value == result.mailId && this.loginForm.controls.password.value == result.password) {
             sessionStorage.setItem('loggedInUsername', result.fName);
-            console.log(result.id);
+            sessionStorage.setItem('emailID', result.mailId);
             sessionStorage.setItem('loggedInUserId', `${result.id}`);
             sessionStorage.setItem('orderAmount', '0');
             sessionStorage.setItem('cartProductArray', JSON.stringify([]));
