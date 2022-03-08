@@ -29,21 +29,41 @@ export class GenericProductListComponent implements OnInit {
         .getProduct(this.category, this.productType)
         .subscribe((data) => {
           this.prodList = Object.values(data);
-          console.log(Object.values(data));
         });
     });
   }
 
   addToCart(product: Product): void {
-    const shoppingCartProduct = new ShoppingCartProduct(product.brand, product.productType, product.price, product.category, product.image, product.id, 1);
-    const cartProductArray: ShoppingCartProduct[] = JSON.parse(sessionStorage.getItem('cartProductArray')!);
+    const shoppingCartProduct = new ShoppingCartProduct(
+      product.brand,
+      product.productType,
+      product.price,
+      product.category,
+      product.image,
+      product.id,
+      1
+    );
+    const cartProductArray: ShoppingCartProduct[] = JSON.parse(
+      sessionStorage.getItem('cartProductArray')!
+    );
     if (cartProductArray) {
       cartProductArray.push(shoppingCartProduct);
-      sessionStorage.setItem('cartProductArray', JSON.stringify(cartProductArray));
+      sessionStorage.setItem(
+        'cartProductArray',
+        JSON.stringify(cartProductArray)
+      );
+    } else {
+      const newCartProductArray: ShoppingCartProduct[] = [];
+      newCartProductArray.push(shoppingCartProduct);
+      sessionStorage.setItem(
+        'cartProductArray',
+        JSON.stringify(newCartProductArray)
+      );
     }
 
-    const orderAmount = parseInt(sessionStorage.getItem('orderAmount')!) + product.price;
-    sessionStorage.setItem('orderAmount', `${orderAmount}`);
-    window.location.href=("shoppingcart");
+    let orderAmount = parseInt(sessionStorage.getItem('orderAmount')!);
+    const amount = orderAmount ? (orderAmount += shoppingCartProduct.price) : shoppingCartProduct.price;
+    sessionStorage.setItem('orderAmount', `${amount}`);
+    window.location.href = 'shoppingcart';
   }
 }
