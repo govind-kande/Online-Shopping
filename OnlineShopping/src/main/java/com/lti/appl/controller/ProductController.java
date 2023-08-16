@@ -25,6 +25,7 @@ public class ProductController {
 	
 	@GetMapping("/getProduct/{category}/{productType}")
 	public List<Product> getProduct(@PathVariable(value = "category") String category, @PathVariable(value = "productType") String productType) throws CustomEmpException {
+		System.out.print("this is to check merge conflict");
 		return productServiceImpl.getProduct(category,productType);
 	}
 }
