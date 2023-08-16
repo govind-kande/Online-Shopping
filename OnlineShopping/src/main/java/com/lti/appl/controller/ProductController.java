@@ -20,6 +20,7 @@ public class ProductController {
 	
 	@GetMapping("/listProduct")
 	public List<Product> listAllProduct() {
+		System.out.print("this massage for testing merge conflict");
 		return productServiceImpl.listAllProduct();	
 	}
 	
